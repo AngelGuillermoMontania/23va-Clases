@@ -1,0 +1,39 @@
+body {
+  height: 500px;
+}
+
+h1 {
+  background-color: orange;
+  height: 150px;
+  width: 300px;
+  color: blue;
+  font-size: 32px;
+  font-weight: 100;
+  font-family: "Playwrite CU";
+}
+h2 {
+  background-color: pink;
+}
+
+p {
+  font-weight: bold;
+  background-color: blue;
+}
+
+#textoUnico {
+  background-color: cadetblue;
+}
+
+
+.cositaDelCoso {
+  background-color: crimson;
+}
+
+
+
+/* 
+
+1. seleccionando la etiqueta
+2. 
+
+*/

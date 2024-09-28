@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+.contenedor {
+  border: 1px solid rgb(121, 174, 13);
+  display: flex;
+  justify-content: space-around;      /* MAIN AXIS */    /*  cuando es Colum ==> cross axis */
+  align-items: center;     /* CROSS AXIS */     /* cuando es Colum ==> main axis */
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+#primero {
+  background-color: red;
+  height: 50px;
+  width: 200px;
+  align-self: self-end;
+}
+
+#segundo {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+}
+
+#tercero {
+  background-color: black;
+  height: 200px;
+  width: 200px;
+}
+
+#cuarto {
+  background-color: rgb(48, 213, 213);
+  height: 200px;
+  width: 200px;
+}
+
+#quinto {
+  background-color: rgb(240, 137, 2);
+  height: 200px;
+  width: 200px;
+}
+
+#sexto {
+  background-color: rgb(255, 0, 170);
+  height: 200px;
+  width: 200px;
+}

@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Deadpool';
+  src: url('./DeadpoolMovie.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: 'Deadpool';
+}
+
+.container-info {
+  padding: 100px;
+}
+
+.container-info .title-info {
+  width: 500px;
+  font-size: 35px;
+}
+
+.container-info .info-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-info .info-info .container-articles {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-info .info-info .container-articles article {
+  border: 1px solid black;
+  width: 375px;
+}

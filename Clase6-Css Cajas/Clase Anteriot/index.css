@@ -1,0 +1,28 @@
+
+p {
+  background-color: blue;
+}
+
+.parrafo {
+  background-color: pink;
+}
+
+p {
+  background-color: aqua;
+}
+
+#parrafo {
+  background-color: red;
+}
+
+header #nav-text div .text-nav { /* 0 1 1 2 */
+  background-color: black;
+}
+
+#texto-1 { /* 0 1 0 0 */
+  background-color: chartreuse;
+}
+
+main h1 {
+  background-color: #ff0000;
+}

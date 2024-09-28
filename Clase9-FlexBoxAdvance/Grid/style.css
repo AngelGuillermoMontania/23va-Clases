@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.contenedor {
+  border: 1px solid rgb(121, 174, 13);
+  grid-template-columns: 400px 400px 1000px 200px 300px;
+  grid-template-rows: 400px 400px;
+  display: flex;
+}
+
+#primero {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  grid-column: 1;
+  display: grid;
+  grid-row: 1;
+}
+
+#segundo {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+}
+
+#tercero {
+  background-color: black;
+  height: 200px;
+  width: 200px;
+}
+
+#cuarto {
+  background-color: rgb(48, 213, 213);
+  height: 200px;
+  width: 200px;
+}

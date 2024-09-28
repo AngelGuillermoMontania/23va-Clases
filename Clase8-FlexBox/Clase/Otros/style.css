@@ -1,0 +1,14 @@
+h1 {
+  color: blue !important;
+  background-color: red;
+  font-size: 32px;
+}
+
+#microChip {
+  font-size: 50px;
+}
+
+#ubication {
+  font-size: 100px;
+  color: pink;
+}

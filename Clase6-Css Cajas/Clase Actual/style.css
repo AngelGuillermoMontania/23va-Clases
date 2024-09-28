@@ -1,0 +1,32 @@
+#bienvenida {
+  width: 300px;
+  height: 200px;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius:15px;
+  /* 
+  1 FORMA:
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  2 FORMA
+  margin: 0 auto 0 auto
+
+  3 FORMA
+  margin: 0 auto;
+  */
+  margin: 0 30px;
+  display: inline-block;
+}
+
+#despedida {
+  width: 350px;
+  height: 250px;
+  border: 3px dotted black;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+/* 300   20  20   100  100   20   20 */

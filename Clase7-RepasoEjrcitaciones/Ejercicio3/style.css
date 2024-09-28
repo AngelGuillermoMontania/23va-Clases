@@ -1,0 +1,33 @@
+.bandera {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.bandera-argentina .franja,
+.bandera-venezuela .franja {
+  height: 66px;
+}
+
+.bandera-argentina .franja-celeste {
+  background-color: blue;
+}
+
+.franja-blanca {
+  background-color: white;
+}
+
+.bandera-mexico .franja {
+  width: 106px;
+  margin: 0 -5px;
+  height: 200px;
+  display: inline-block;
+}
+
+.bandera-mexico .franja-verde {
+  background-color: green;
+}
+
+.bandera-mexico .franja-roja {
+  background-color: red;
+}

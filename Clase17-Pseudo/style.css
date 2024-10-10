@@ -1,0 +1,73 @@
+* {
+  background-color: black;
+}
+
+button {
+  border: none;
+  padding: 20px 50px; 
+  background: linear-gradient(11deg, rgba(2,0,36,1) 16%, rgba(255,0,0,0) 50%, rgba(9,9,121,1) 91%);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
+
+.title:not(p) {
+  color: red;
+}
+
+.container h5:nth-child(1) {
+  background-color: orange;
+}
+
+.links:active {
+  color: green;
+  background-color: red;
+}
+
+#text:focus {
+  background-color: yellow;
+}
+
+#email:valid {
+  background-color: green;
+}
+
+#email:invalid {
+  background-color: red;
+}
+
+.section > p {
+  color: blue;
+}
+
+a[href="cosa.html"]:hover :active {
+  color: orange;
+}
+
+.container h5 ~ span {
+  color: green;
+}
+
+.container span {
+  
+}
+
+
+
+header .logo .title {
+  
+}
+header .logo .img {
+  
+}
+
+header nav ul-nav li {
+
+}
+
+main .container-logo-title {
+  
+}

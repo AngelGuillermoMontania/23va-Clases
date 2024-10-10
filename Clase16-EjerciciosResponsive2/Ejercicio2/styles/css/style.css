@@ -1,0 +1,41 @@
+/* .grilla-imagenes {
+  background-image: url("../images/imageEjemplo.png");
+  height: 700px;
+  width: 1000px;
+  border: 1px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.grilla-imagenes {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.grilla-imagenes img {
+  width: 25%;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .grilla-imagenes img {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .grilla-imagenes img {
+    width: 45%;
+  }
+}
+@media (max-width: 320px) {
+  .grilla-imagenes img {
+    width: 100%;
+  }
+}

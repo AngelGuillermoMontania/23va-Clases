@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+}
+
+/* main {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.caja1 {
+  height: 50%;
+  width: 50%;
+  background-color: chocolate;
+} */
+
+/* .caja1 {
+  height: 80vh;   ViewportHeight 
+  width: 20vw;     ViewportWidth 
+  background-color: chocolate;
+} */
+
+body {
+  background-color: blue;
+}
+
+header {
+  background-color: red;
+  height: 30px;
+}
+
+main {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card1,
+.card2,
+.card3 {
+  width: 20%;
+  height: 200px;
+  background-color: black;
+  border: solid white 1px;
+}
+
+/* @media (min-width: 768px) {
+
+  main {
+    flex-direction: row;
+  }
+  
+  .card1,
+  .card2,
+  .card3 {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+}
+
+@media (min-width: 1920px) {
+  
+} */
+
+/* 
+
+POR DEFECTO LA ETIQUETA P SIEMPRE ES 16px
+
+MEDIDAS ABSOLUTAS
+
+- px
+- rem
+- em:
+
+  main {
+    font-size: 32px;
+  }
+  .caja1 {
+    height: 5em;   1 em es el tamaño del texto del elemento padre
+    width: 5em;
+    background-color: chocolate;
+  }
+
+MEDIDAS RELATIVAS
+
+%
+vh
+vw
+
+
+*/
+
+
+/* 
+
+1920px _____ 100%
+500px  _____  X
+
+(500px * 100) / 1920  = El porcentaje que necesitas usar
+
+
+
+
+BASE DEL PROFE CON MEDIA QUERYS
+
+estilos
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1920px) {
+}
+
+*/

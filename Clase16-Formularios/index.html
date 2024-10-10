@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+  <link rel="stylesheet" href="./styles/css/style.css">
+</head>
+<body>
+  <form action="./exito.html">
+    <div>
+      <label >Ingrese su fecha de inicio</label>
+      <input required type="date" min="2024-09-21" max="2024-10-15" value="2024-10-07" />
+    </div>
+    <div>
+      <label>Ingrese su edad:</label>
+      <input class="text-form" type="number" min="5" max="10" placeholder="Entre 18 y 1500 años" />
+    </div>
+    <div>
+      <label>Ingrese su nombre:</label>
+      <input class="text-form" placeholder="Primer nombre" />
+    </div>
+    <div>
+      <label>Acepta terminos y condiciones</label>
+      <input type="checkbox" checked />
+    </div>
+    <div>
+      <label>Ingrese su mail</label>
+      <input class="text-form" required type="email" />
+    </div>
+    <div>
+      <label>Cual prefiere?</label>
+      <div>
+        <label>HTML</label>
+        <input name="programacion" type="radio" />
+        <label>CSS</label>
+        <input name="programacion" type="radio" />
+      </div>
+    </div>
+    <div>
+      <label>DEJE SU MENSAJE, esto no es twitter</label>
+      <textarea></textarea>
+    </div>
+    <div>
+      <label>De que pais eres?</label>
+      <select>
+        <option>China</option>
+        <option>Japon</option>
+        <option>Corea</option>
+      </select>
+    </div>
+    <div>
+      <input id="aceptar" type="submit" value="ACEPTAR TODO" />
+    </div>
+  </form>
+</body>
+</html>

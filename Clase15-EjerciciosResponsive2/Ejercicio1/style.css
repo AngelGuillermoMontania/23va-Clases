@@ -1,0 +1,86 @@
+body {
+  width: 100vw;
+  margin: 0;
+}
+
+header,
+nav, 
+main,
+aside,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 70px;
+  background-color: blue;
+}
+
+nav {
+  height: 50px;
+  background-color: red;
+}
+
+.main {
+  background-color: rgb(247, 247, 0);
+  height: 300px;
+}
+
+aside {
+  height: 60px;
+  background-color: aqua;
+}
+
+footer {
+  background-color: green;
+  height: 75px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.contain-button {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  cursor: pointer;
+  background-color: blue;
+  border: 1px solid black;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 0px black;
+}
+
+.button:hover {
+  transform: scale(2) rotate(360deg);
+  background-color: green;
+  border: 1px solid white;
+  color: black;
+  transition: all ease-in-out 2s;
+}
+
+@media (min-width: 500px) {
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main div {
+    width: 70%;
+  }
+
+  aside {
+    height: 100%;
+    width: 30%;
+  }
+
+}

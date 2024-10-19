@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 4rem;
+  background-color: palevioletred;
+  position: fixed;
+}
+
+.box-1 {
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+}
+
+.box-2 {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+  position: relative;
+   /* top: -250px;  */
+}
+
+.box-3 {
+  height: 300px;
+  width: 300px;
+  background-color: yellow;
+}
+
+h1 {
+  margin: 0;
+}
+
+.sub-box-2 {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  position: absolute;
+  top: -25px;
+  left: 125px;
+}

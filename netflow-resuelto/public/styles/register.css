@@ -1,0 +1,66 @@
+.register {
+    background-image: url('./../images/backgroundRegister.jpg');
+    backdrop-filter: brightness(50%);
+    font-family: var(--base-font);
+    color: var(--white);
+    height: 100vh;
+}
+
+.register main {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register main form {
+    width: 15%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.685);
+    padding: 5rem;
+    border-radius: 15px;
+}
+
+.register main form .title{
+    font-size: 2rem;
+}
+
+.register main form .contain-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+}
+
+.register main form .contain-inputs input{
+    background-color: rgb(78, 78, 78);
+    border: none;
+    height: 2rem;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.register main form .contain-inputs input:active,
+.register main form .contain-inputs input:focus{
+    outline: none;
+}
+
+.register main form .contain-inputs button{
+    height: 3rem;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.register main form .login a {
+    font-weight: bold;
+}
+
+.register main form .login a:hover {
+    text-decoration: underline;
+}

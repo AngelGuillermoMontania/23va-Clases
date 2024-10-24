@@ -1,0 +1,271 @@
+.home {
+    background-color: var(--black);
+    font-family: var(--base-font);
+    color: var(--white);
+}
+
+.home .contain-recommended {
+    padding-top: 3rem;
+    background-image: url('../images/manifiesto.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 15rem;
+    box-shadow: inset 0px -79px 53px -22px var(--black);
+    position: relative;
+}
+
+.home .contain-recommended .description-recommended{
+    width: 60%;
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+}
+
+.home .contain-recommended .description-recommended .type-recommended {
+    display: none;
+}
+
+.home .contain-recommended .description-recommended .information-recommended{
+    display: flex;
+    flex-direction: column;
+}
+
+.home .contain-recommended .description-recommended .information-recommended h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.home .contain-recommended .description-recommended .information-recommended p{
+    font-size: 0.5rem;
+}
+
+.home .contain-recommended .description-recommended .contain-buttonsRecommended {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home .contain-recommended .description-recommended .contain-buttonsRecommended button {
+    height: 1.5rem;
+    margin: 0 5px;
+    font-size: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: 900;
+}
+
+.home .contain-recommended .description-recommended .contain-buttonsRecommended button i{
+    margin: 0 5px;
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
+
+.home .contain-recommended .description-recommended .contain-buttonsRecommended button:nth-child(1){
+    width: 40%;
+    background-color: var(--buton-white);
+}
+
+.home .contain-recommended .description-recommended .contain-buttonsRecommended button:nth-child(1):hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.843);
+}
+
+.home .contain-recommended .description-recommended .contain-buttonsRecommended button:nth-child(2){
+    width: 50%;
+    color: var(--white);
+    background-color: var(--buton-gray);
+}
+
+.home .contain-recommended .description-recommended .contain-buttonsRecommended button:nth-child(2):hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.739);
+}
+
+.home main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -3rem;
+}
+
+.home main .contain-carousel {
+    flex-direction: column;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding-left: 3%;
+    margin-bottom: 1rem;
+}
+
+.home main .contain-carousel h4{
+    margin: 10px 0;
+}
+
+.home main .contain-carousel .contain-cards{
+    height: 5rem;
+    overflow: hidden;
+}
+
+.home main .contain-carousel .contain-cards .card{
+    height: 5rem;
+    width: 9rem;
+    display: inline-block;
+    margin: 0 2px;
+    border-radius: 3px;  
+}
+
+.home main .contain-carousel .contain-cards .card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+
+    .home .contain-recommended {
+        height: 22rem;
+    }
+    
+    .home .contain-recommended .description-recommended{
+        width: 35%;
+    }
+
+    .home .contain-recommended .description-recommended .type-recommended {
+        display: flex;
+        align-items: center;
+    }
+
+    .home .contain-recommended .description-recommended .type-recommended img{
+        width: 0.5rem;
+        height: 1rem;
+    }
+
+    .home .contain-recommended .description-recommended .type-recommended img,
+    .home .contain-recommended .description-recommended .type-recommended h2 {
+        margin-left: 5px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        font-weight: 900;
+        font-size: 0.5rem;
+    }
+
+    .home .contain-recommended .description-recommended .contain-buttonsRecommended button i{
+        font-size: 0.9rem;
+    }
+
+    .home main {
+        top: -5rem;
+    }
+
+    .home main .contain-carousel .contain-cards{
+        height: 8rem;
+    }
+    
+    .home main .contain-carousel .contain-cards .card{
+        height: 8rem;
+        width: 15rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .home main {
+        top: -5rem;
+    }
+
+    .home .contain-recommended {
+        height: 80vh;
+    }
+    
+    .home .contain-recommended .description-recommended .type-recommended img{
+        width: 1rem;
+        height: 2rem;
+    }
+
+    .home .contain-recommended .description-recommended .type-recommended h2 {
+        font-size: 1rem;
+    }
+
+    .home .contain-recommended .description-recommended .information-recommended h1{
+        font-size: 4rem;
+    }
+
+    .home .contain-recommended .description-recommended .information-recommended p{
+        font-size: 0.7rem;
+    }
+
+    .home .contain-recommended .description-recommended .contain-buttonsRecommended {
+        width: 90%;
+    }
+
+    .home .contain-recommended .description-recommended .contain-buttonsRecommended button{
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .home .contain-recommended .description-recommended .contain-buttonsRecommended button i{
+        font-size: 1.2rem;
+    }
+
+    /* .home main .contain-carousel .contain-cards{
+        overflow: visible;
+    }
+
+    .home main .contain-carousel .contain-cards .card{
+        transition: all 1s ;
+    }
+    
+    .home main .contain-carousel .contain-cards .card:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    } */
+
+}
+
+@media (min-width: 1440px) {
+
+    .home main {
+        top: -10rem;
+    }
+    
+    .home .contain-recommended {
+        height: 100vh;
+    }
+
+    .home .contain-recommended .description-recommended .type-recommended img {
+        width: 2rem;
+        height: 3rem;
+    }
+
+    .home .contain-recommended .description-recommended .information-recommended h1{
+        font-size: 7rem;
+    }
+
+    .home .contain-recommended .description-recommended .information-recommended p{
+        font-size: 1.5rem;
+    }
+
+    .home .contain-recommended .description-recommended .contain-buttonsRecommended button {
+        font-size: 1.5rem;
+        height: 3.5rem;
+    }
+
+    .home .contain-recommended .description-recommended .contain-buttonsRecommended button i{
+        font-size: 1.8rem;
+    }
+
+    .home main .contain-carousel .contain-cards{
+        height: 11rem;
+    }
+    
+    .home main .contain-carousel .contain-cards .card{
+        height: 11rem;
+        width: 18rem;
+    }
+
+    .home main .contain-carousel h4{
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+}

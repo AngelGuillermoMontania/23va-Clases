@@ -1,0 +1,18 @@
+@import url('./header.css');
+@import url('./home.css');
+@import url('./register.css');
+@import url('./footer.css');
+
+:root {
+    --black: #141414;
+    --white: #f3f1f1;
+    --hover: rgb(139, 139, 139);
+    --base-font: 'Nanum Gothic';
+    --buton-white: rgba(255, 255, 255, 0.73);
+    --buton-gray: rgba(128, 128, 128, 0.509)
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

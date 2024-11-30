@@ -1,0 +1,11 @@
+.modo-claro {
+  --colorFondo: gray
+}
+
+.modo-oscuro {
+  --colorFondo: black
+}
+
+.hero {
+  background-color: var(--colorFondo);
+}

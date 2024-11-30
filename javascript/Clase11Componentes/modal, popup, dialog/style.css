@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contain-modal {
+  background-color: rgba(0, 0, 0, 0.517);
+  display: none;   /* none, block, flex */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+
+}
+
+.contain-modal .modal {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contain-modal .modal .contain-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+}
+
+.contain-modal .modal .contain-title h5{
+  font-size: 40px;
+}
+
+.contain-modal .modal .contain-button{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain-modal .modal .contain-button button{
+  width: 30%;
+  height: 30px;
+
+}
+
+main h1 {
+  margin: 0;
+}
+
+img {
+  height: 400px;
+  width: 300px;
+}

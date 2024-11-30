@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  width: 50%;
+}
+
+header ul li {
+  width: 10%;
+}
+
+#list-desktop {
+  display: none;
+}
+
+#burger {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: gray;
+  height: 300px;
+  width: 50%;
+  transition: all 5s ease-in-out;
+  
+}
+
+@media (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+
+  #openBurger, 
+  #closeBurger {
+    display: none;
+  }
+
+  #list-desktop {
+    display: block;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador De Tarjetas</title>
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+  <header>
+    <h1>GENERADOR DE TARJETAS</h1>
+  </header>
+  <main>
+    <form>
+      <label>Texto Superior</label>
+      <input id="textoTop" type="text" placeholder="Escribe Aqui..." />
+
+      <label>Texto Inferior</label>
+      <input id="textoBottom" type="text" placeholder="Escriba aqui" />
+
+      <label>Color del texto</label>
+      <input id="colorText" type="color" />
+
+      <label>Color de Fondo</label>
+      <input id="colorBackground" type="color" />
+
+      <label>Alinear Texto:</label>
+      <select id="alignText">
+        <option value="left">Izquierda</option>
+        <option value="center">Centro</option>
+        <option value="right">Derecha</option>
+      </select>
+    </form>
+    <div id="card">
+      <h1 style="margin: 0;" id="topCard"></h1>
+      <h3 id="bottomCard"></h3>
+    </div>
+    <button id="reestablecer">Reestablecer Valores</button>
+    <button id="download">Descargar Tarjeta</button>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>

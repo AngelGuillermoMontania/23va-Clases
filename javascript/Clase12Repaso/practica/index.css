@@ -1,0 +1,4 @@
+div {
+  filter: contrast() brightness();
+  word-wrap: normal;
+}

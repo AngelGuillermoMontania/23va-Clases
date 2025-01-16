@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            cartoon: "cartoon",
+            honguito: "Rubik Wet Paint",
+          },
+          extend: {
+            colors: {
+              pepe: "#da373d",
+              loquita: "#00FFFF",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .btn-primary {
+          @apply text-pepe p-1 bg-black hover:bg-slate-200;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-pepe font-cartoon bg-loquita pt-[20px]">Hola soy un titulo</h1>
+    <button class="btn-primary">Hola</button>
+    <button class="btn-primary">Hola</button>
+    <button class="btn-primary">Hola</button>
+    <button class="btn-primary">Hola</button>
+    <ul>
+      <li class="text-pepe hover:text-slate-600">Comprar</li>
+      <li class="text-pepe hover:text-slate-600">Comer</li>
+      <li class="text-pepe hover:text-slate-600">Correr</li>
+    </ul>
+  </body>
+</html>

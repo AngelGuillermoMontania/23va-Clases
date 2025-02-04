@@ -1,4 +1,21 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: 'cartoon';
   src: url("./styles/fonts/SuperCartoon.ttf");
 }
+
+@theme {
+  --color-loquita: #00FFFF;
+  --color-pepe: #da373d;
+
+  --font-cartoon: 'cartoon';
+  --font-honguito: "Rubik Wet Paint";
+}
+
+/* @layer components {
+  .btn-primary {
+    @apply text-pepe p-1 bg-black hover:bg-slate-200;
+  }
+} */
+

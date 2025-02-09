@@ -63,8 +63,7 @@ const fecha2 = dayjs();
 // console.log(fecha1.isAfter(fecha2));
 // console.log(fecha1.isBefore(fecha2));
 console.log(fecha1.isSame(fecha2));
-/*  */
-console.log(dayjs().format("DD/MM/YYYY"));
+/*  */console.log(dayjs().format("DD/MM/YYYY"));
 console.log(dayjs().format("DD-MM-YYYY"));
 console.log(dayjs().isBefore(dayjs()));
 console.log(dayjs().isSameOrBefore(dayjs()));

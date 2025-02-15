@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <title>Ventas</title>
+</head>
+<body>
+  <header class="flex justify-between py-4 border border-black">
+    <h1>Ventas</h1>
+    <nav>
+      <button id="button-view-home" class="border border-black px-4 rounded mx-4 bg-blue-700 sm:bg-green-700">Home</button>
+      <button id="button-view-venta" class="border border-black px-4 rounded mx-4">Nueva Venta</button>
+      <button id="button-view-reporte" class="border border-black px-4 rounded mx-4">Reporte</button>
+    </nav>
+  </header>
+  <main class="flex flex-col justify-center items-center ">
+    <section id="view-home" class="w-full flex flex-row justify-around items-center">
+      <section id="contain-filters" class="w-1/3">
+        <h5>FILTROS</h5>
+        <div>
+          <label>Filtrar por Tipo</label>
+          <select id="select-filter-type">
+            <option value="all">All</option>
+            <option value="Verduleria">Verduleria</option>
+            <option value="Libreria">Libreria</option>
+            <option value="Ferreteria">Ferreteria</option>
+            <option value="Pasteleria">Pasteleria</option>
+            <option value="Calzados">Calzados</option>
+          </select>
+        </div>
+      </section>
+      <section class="w-2/3">
+        <p>Lista De Ventas</p>
+        <div id="list-ventas"></div>
+      </section>
+    </section>
+    <section id="view-venta" class="w-1/2">
+      <form id="form-create" class="flex-col justify-around items-center w-full flex-wrap border border-2 border-black rounded-xl px-16 py-4 h-50">
+        <div>
+          <label>Seleccione tipo de venta</label>
+          <select id="create-type">
+            <option value="Verduleria" selected>Verduleria</option>
+            <option value="Libreria">Libreria</option>
+            <option value="Ferreteria">Ferreteria</option>
+            <option value="Pasteleria">Pasteleria</option>
+            <option value="Calzados">Calzados</option>
+          </select>
+        </div>
+        <div>
+          <label>Valor</label>
+          <input id="create-valor" type="number" />
+        </div>
+        <div>
+          <label>Fecha</label>
+          <input id="create-fecha" type="date" />
+        </div>
+        <div>
+          <label>Cantidad</label>
+          <input id="create-cantidad" type="number" />
+        </div>
+        <button type="submit" class="border border-blue-500 shadow-sm px-2 rounded-xl">Crear Venta</button>
+      </form>
+      <form id="form-edit" class="flex-col justify-around items-center w-full flex-wrap border border-2 border-black rounded-xl px-16 py-4 h-50">
+        <div>
+          <label>Seleccione tipo de venta</label>
+          <select id="edit-type">
+            <option value="all">All</option>
+            <option value="Verduleria">Verduleria</option>
+            <option value="Libreria">Libreria</option>
+            <option value="Ferreteria">Ferreteria</option>
+            <option value="Pasteleria">Pasteleria</option>
+            <option value="Calzados">Calzados</option>
+          </select>
+        </div>
+        <div>
+          <label>Valor</label>
+          <input id="edit-valor" type="number" />
+        </div>
+        <div>
+          <label>Fecha</label>
+          <input id="edit-fecha" type="date" />
+        </div>
+        <div>
+          <label>Cantidad</label>
+          <input id="edit-cantidad" type="number" />
+        </div>
+        <button type="submit" class="border border-blue-500 shadow-sm px-2 rounded-xl">Editar Venta</button>
+      </form>
+    </section>
+    <section id="view-reporte">
+      <div>
+        <h3>Total De Ventas</h3>
+        <p>$0</p>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

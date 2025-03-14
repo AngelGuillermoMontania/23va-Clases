@@ -109,12 +109,12 @@ new Promise((resolve, reject) => {
 const $divContainer = $("#container");
 let datosPokemon;
 
-fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+fetch("https://pokeapi.co/api/v2/pokemon")
   .then((res) => {
     return res.json();
   })
   .then((res) => {
-    $divContainer.innerHTML = `<div><h1>${res.name}</h1></div>`;
+    console.log(res);
   })
   .catch((err) => {
     $divContainer.innerHTML = `<h1>Ocurrio un error, por favor recargue o contactese con Ro Lobruno para que le solucione el problea</h1>`;

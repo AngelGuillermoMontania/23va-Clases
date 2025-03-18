@@ -39,7 +39,7 @@ function obtenerDatos(page) {
         .then(resolve => {
           console.log(resolve)
         })
-        .catch(error => console.log(error))
+          .catch(error => console.log(error))
       // pintarDatos(characters)                        //  pintarDatos
     })
     .catch(error => {

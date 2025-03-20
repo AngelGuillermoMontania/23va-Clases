@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <form id="form-create">
+    <input type="text" placeholder="Nombre" required/>
+    <input type="number" placeholder="Stock" required />
+    <input type="text" placeholder="Categoria" required />
+    <button type="submit">Crear</button>
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="container-products">
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form id="form-edit">
+    <input id="input-nombre" type="text" placeholder="Nombre" required/>
+    <input id="input-stock" type="number" placeholder="Stock" required />
+    <input id="input-categoria" type="text" placeholder="Categoria" required />
+    <button type="submit" class="btn-editForm">Editar</button>
+  </form>
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import Header from "./components/Header"
 import CreateTask from "./components/CreateTask"
@@ -8,17 +8,7 @@ import ContainerTask from "./components/ContainerTask"
 function App() {
 
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || [])
-
-  // {
-  //   id: 1, 
-  //   title: "cosita", 
-  //   done: false 
-  // },
-  // {
-  //   id: 2, 
-  //   title: "chimichurri", 
-  //   done: true 
-  // }
+  const [selected, setSelected] = useState("all")
 
   function deleteTask(id) {
     const taskFilters = tasks.filter(t => t.id != id)
@@ -32,15 +22,23 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(nuevoArray))
     setTasks(nuevoArray)
   }
-
-  function filterTasks(optionSelect) {
+  
+  useEffect(() => {
     const allTasks = JSON.parse(localStorage.getItem("tasks"))
-    if(optionSelect == "all") {
+    if(selected == "all") {
       setTasks(allTasks)
     } else {
-      const arrayFiltrado = allTasks.filter(t => String(t.done) == optionSelect)
+      const arrayFiltrado = allTasks.filter(t => String(t.done) == selected)
       setTasks(arrayFiltrado)
     }
+  }, [selected])
+
+  useEffect(() => {
+    // Infla un globo y reventalo
+  }, [/* si un globo revienta */])
+
+  function filterTasks(select) {
+    setSelected(select)
   }
 
   function modifyTask(id) {
@@ -63,7 +61,7 @@ function App() {
     <>
       <Header />
       <CreateTask addTask={addTask} />
-      <FilterTask filterTasks={filterTasks} />
+      <FilterTask filterTasks={filterTasks} selected={selected} />
       <ContainerTask tasks={tasks} deleteTask={deleteTask} modifyTask={modifyTask} />
     </>
   )

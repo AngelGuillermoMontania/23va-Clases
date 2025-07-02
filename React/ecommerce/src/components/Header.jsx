@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -12,16 +13,24 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Badge } from '@mui/material';
+import { CartContext } from '../context/CartContext';
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { FavoriteContext } from '../context/FavoritesContext';
 
-const categorias = ['Zapatos', 'Deportivas', 'Urbanas'];
+const categorias = ['zapatos', 'deportivas', 'urbanas'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
 
-  const [category, setCategory] = useState("")
+  const navigate = useNavigate()
+  const { countInCart } = useContext(CartContext)
+  const { countInFavorite } = useContext(FavoriteContext)
 
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,9 +39,14 @@ function Header() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (textCategory) => {
     setAnchorElNav(null);
   };
+
+  const handleCloseNavMenuYNavegaACategoria = (textCategory) => {
+    setAnchorElNav(null);
+    navigate(`/${textCategory}`)
+  }
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -42,24 +56,27 @@ function Header() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            CalzAdas
-          </Typography>
 
+          {/* LOGO Y TITULO DEL HEADER/PAGINA */}
+          <Box onClick={() => navigate("/")}>
+            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              CalzAdas
+            </Typography>
+          </Box>
+
+              {/* Esto es mobile y menu hamburguesa */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -85,21 +102,23 @@ function Header() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              onOpen
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {categorias.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => handleCloseNavMenuYNavegaACategoria(page)}>
                   <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+
+          {/* TITULO DE LA PAGINA */}
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            onClick={() => navigate("/")}
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -111,13 +130,16 @@ function Header() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            CalzAdas
           </Typography>
+
+
+          {/* ESTO SERIA EN ESCRITORIO */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {categorias.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleCloseNavMenuYNavegaACategoria(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -125,7 +147,12 @@ function Header() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+            <Badge badgeContent={countInCart()} color="error">
+              <ShoppingCartIcon fontSize='large' onClick={() => navigate("/cart")} />
+            </Badge>
+            <Badge badgeContent={countInFavorite()} color="error">
+              <FavoriteIcon color="error" fontSize='large' onClick={() => navigate("/favoritos")} />
+            </Badge>
           </Box>
         </Toolbar>
       </Container>

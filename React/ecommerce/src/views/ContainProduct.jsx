@@ -1,49 +1,16 @@
 import { Grid } from "@mui/material"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Product from "../components/Product"
-import db from "../../fireStoreConfig.js"
-import { collection, getDocs, query, where } from "firebase/firestore"
 import { useParams } from "react-router"
+import useCalzado from "../hooks/useCalzado.js"
 
 export default function ContainProduct() {
 
-  const [products, setProducts] = useState([])
-  const { categoria } = useParams()
+  const { categoria } = useParams()   //   home ==> undefined       no es home ===> "zapatos"
+  const { getCalzados, listCalzado } = useCalzado()
 
   useEffect(() => {
-    const getCalzados = async () => {
-      try {
-        const calzadosRef = collection(db, 'Calzado');
-        const snapshot = await getDocs(calzadosRef);
-        let aux = [];
-        snapshot.forEach(doc => {
-          aux.push({id: doc.id, ...doc.data()});
-        });
-        console.log(aux)
-        setProducts(aux)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    const getCalzadosByCategory = async () => {
-      try {
-        const q = query(collection(db, "Calzado"), where("categoria", "==", categoria));
-  
-        const querySnapshot = await getDocs(q);
-        let aux = [];
-        querySnapshot.forEach((doc) => {
-          aux.push({id: doc.id, ...doc.data()})
-        });
-        setProducts(aux)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    if(categoria) {
-      getCalzadosByCategory()
-    } else {
-      getCalzados()
-    }
+    getCalzados(categoria)
   }, [categoria])
   
   return <Grid
@@ -57,7 +24,7 @@ export default function ContainProduct() {
     }}
   >
     {
-      products.map(({id, img, categoria, descripcion, marca, modelo, precio, stock}) => <Product 
+      listCalzado.map(({id, img, categoria, descripcion, marca, modelo, precio, stock}) => <Product 
         key={id} 
         img={img} 
         id={id} 

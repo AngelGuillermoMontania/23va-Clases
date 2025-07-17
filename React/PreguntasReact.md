@@ -9,3 +9,28 @@ Fue creada en 2011 por Jordan Walke, un ingeniero de software que trabajaba en F
 Es una biblioteca muy popular y es usada por muchas empresas como Facebook, Netflix, Airbnb, Twitter, Instagram, etc.
 
  
+### CUALES SON LAS CARACTERISTICAS DE REACT?
+- Componentes
+- SPA (Virtual DOM)
+- Escalable
+- Unidireccional. 
+
+### QUE ES UN COMPONENTE
+
+- Seccion o Pieza reutilizable de codigo. Renderiza ese codigo
+- Puede ser o no parte de otro codigo
+- Funcion, anteriorme con clase
+- Se encarga de una sola cosa. Principio de una sola responsabilidad
+
+
+### QUE ES JSX
+
+- JavaScript mas HTML (JavaScript con super poderes)     ===>   XML + JavaScript
+- Extension de archivo, como sintaxis.
+- Es exlusivo de React
+- Consideramos JSX cuando retornamos HTML
+- Nos ayuda con sintaxis y ayudas del editor de codigo, para React
+
+### Como/con que/gracias a que se transforma JSX para que se lea en el navegador
+
+- Gracias a Vite, Create React App, Next. (Babel)

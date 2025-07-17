@@ -1,6 +1,8 @@
-const DetailPet = () => {
+const DetailPet = (description) => {
   return (
-    <div>DetailPet</div>
+    <div>{
+      description
+    }</div>
   )
 }
 
